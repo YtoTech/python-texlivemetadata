@@ -58,8 +58,13 @@ def list_installed_packages():
 TLMGR_INFO_LINE_REGEX_PATTERN = r"^(\S+):\s+(.+)$"
 TLMGR_INFO_LINE_REGEX = re.compile(TLMGR_INFO_LINE_REGEX_PATTERN)
 
-TLMGR_INFO_VALUE_PARSER_BOOLEAN = lambda value: value.lower() == "yes"
-TLMGR_INFO_VALUE_PARSER_STRING_LIST = lambda value: value.split(" ")
+
+def TLMGR_INFO_VALUE_PARSER_BOOLEAN(value):
+    return value.lower() == "yes"
+
+
+def TLMGR_INFO_VALUE_PARSER_STRING_LIST(value):
+    return value.split(" ")
 
 
 def TLMGR_INFO_VALUE_PARSER_DATETIME(value):
