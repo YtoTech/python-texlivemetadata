@@ -72,6 +72,8 @@ def TLMGR_INFO_VALUE_PARSER_DATETIME(value):
 
 
 def TLMGR_INFO_VALUE_PARSER_SIZES(value):
+    if not value.strip():
+        return {}
     sizes_parts = value.split(",")
     return {
         key.replace(":", ""): value
