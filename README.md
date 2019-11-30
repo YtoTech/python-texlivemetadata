@@ -14,6 +14,25 @@ be processed and used from Python.
 pip install texlivemetadata
 ```
 
+## TeXLive version information
+
+```python
+import texlivemetadata
+
+# Get version information on current TeXLive installation.
+print(texlivemetadata.get_texlive_version_information())
+# --->
+# {'texlive': {'installation_path': '/opt/texlive/2019',
+#              'modules': [{'name': 'TLConfig', 'value': '50190'},
+#                          {'name': 'TLUtils', 'value': '50493'},
+#                          {'name': 'TLPOBJ', 'value': '50211'},
+#                          {'name': 'TLPDB', 'value': '51110'},
+#                          {'name': 'TLPaper', 'value': '45795'},
+#                          {'name': 'TLWinGoo', 'value': '47907'}],
+#              'version': '2019'},
+#  'tlmgr': {'revision': '51217', 'revision_date': '2019-05-24 23:47:41 +0200'}}
+```
+
 ## Package listing
 
 ```python

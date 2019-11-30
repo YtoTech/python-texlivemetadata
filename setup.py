@@ -6,7 +6,7 @@ with open("README.md") as f:
 
 setup(
     name="texlivemetadata",
-    version="0.1.2",
+    version="0.1.3",
     url="https://github.com/YtoTech/python-texlivemetadata",
     license="MIT",
     author="Yoan Tournade",
